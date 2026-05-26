@@ -1,17 +1,13 @@
 const hiddenElements = document.querySelectorAll('.hidden');
 
-window.addEventListener('scroll', () => {
-
-    hiddenElements.forEach(element => {
-
-        const elementTop = element.getBoundingClientRect().top;
-
-        if(elementTop < window.innerHeight - 100){
-
-            element.classList.add('show');
-
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
         }
-
     });
-
+}, {
+    threshold: 0.1
 });
+
+hiddenElements.forEach(el => observer.observe(el));
