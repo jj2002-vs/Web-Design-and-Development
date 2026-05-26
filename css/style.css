@@ -113,13 +113,17 @@ nav a {
 
 
 .project-section {
-    min-height: 100vh;
+    min-height:100vh;
 
-    background: #5b1dff;
+    background:#5b1dff;
 
-    padding: 40px;
+    padding:40px;
 
-    position: relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    position:relative;
 }
 
 
@@ -144,17 +148,20 @@ nav a {
 .project-text a {
     color: white;
     font-size: 20px;
+    width:400px;
 }
 
 
 
 
 .project-images {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+    display:flex;
+    gap:40px;
 
-    margin-top: 100px;
+    justify-content:center;
+    align-items:center;
+
+    flex:1;
 }
 
 .project-images img {
