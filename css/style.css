@@ -91,6 +91,7 @@ nav a {
 
 .profile-image img {
     width: 200px;
+    height:auto;
 }
 
 
@@ -157,7 +158,8 @@ nav a {
 }
 
 .project-images img {
-    width: 220px;
+    width:250px;
+    height:auto;
 }
 
 
