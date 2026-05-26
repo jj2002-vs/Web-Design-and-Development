@@ -11,3 +11,4 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 hiddenElements.forEach(el => observer.observe(el));
+console.log("visible");
