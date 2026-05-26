@@ -11,3 +11,26 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 hiddenElements.forEach(el => observer.observe(el));
+const glow = document.querySelector(".cursor-glow");
+
+let mouseX = 0;
+let mouseY = 0;
+let currentX = 0;
+let currentY = 0;
+
+window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+function animate() {
+    currentX += (mouseX - currentX) * 0.1;
+    currentY += (mouseY - currentY) * 0.1;
+
+    glow.style.left = currentX + "px";
+    glow.style.top = currentY + "px";
+
+    requestAnimationFrame(animate);
+}
+
+animate();
