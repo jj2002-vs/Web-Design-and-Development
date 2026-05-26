@@ -7,7 +7,9 @@ window.addEventListener('scroll', () => {
         const elementTop = element.getBoundingClientRect().top;
 
         if(elementTop < window.innerHeight - 100){
+
             element.classList.add('show');
+
         }
 
     });
